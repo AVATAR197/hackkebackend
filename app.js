@@ -27,11 +27,11 @@ app.post("/add-patient", (req, res, next) => {
         if (err) {
             console.log("error", err);
             // some error occured
-            res.json(JSON.stringify({ status: "error" }));
+            res.json({ status: "error" });
         } else {
             console.log("success");
             // successfully inserted into db
-            res.json(JSON.stringify({ status: "success" }));
+            res.json({ status: "success" });
         }
     });
 });
@@ -50,13 +50,11 @@ app.post("/set-patient-details", (req, res, next) => {
 
     connection.query(sql, (err, results, fields) => {
         if (err) {
-            console.log("error", err);
             // some error occured
-            res.json(JSON.stringify({ status: "error" }));
+            res.json({ status: "error" });
         } else {
-            console.log("success");
             // successfully inserted into db
-            res.json(JSON.stringify({ status: "success" }));
+            res.json({ status: "success" });
         }
     });
 });
@@ -64,5 +62,5 @@ app.post("/set-patient-details", (req, res, next) => {
 app.get("/status", (req, res) => res.send("Working!"));
 
 // Port 8080 for Google App Engine
-app.set("port", process.env.PORT || 3306);
-app.listen(3306);
+app.set("port", process.env.PORT || 3000);
+app.listen(3000);
