@@ -64,5 +64,5 @@ app.post("/set-patient-details", (req, res, next) => {
 app.get("/status", (req, res) => res.send("Working!"));
 
 // Port 8080 for Google App Engine
-app.set("port", process.env.PORT || 3000);
-app.listen(3000);
+app.set("port", process.env.PORT || 3306);
+app.listen(3306);

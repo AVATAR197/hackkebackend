@@ -21,7 +21,7 @@ let connection = mysql.createConnection({
     user: "root",
     database: "hackke",
     password: "",
-    port: "3000",
+    port: "3306",
 });
 
 connection.connect(function (err) {
